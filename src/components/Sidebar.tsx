@@ -7,9 +7,11 @@ export const Sidebar = () => {
     return (
         <aside className="md:col-span-1">
             {/* Profile Section */}
-            < Profile />
-            < Skills className="md:hidden" />
-            < TestimonialCarousel slides={DEFAULT_SLIDES} options={DEFAULT_OPTIONS} />
+            < Profile/>
+            <div className="md:hidden">
+                <Skills/>
+            </div>
+            < TestimonialCarousel slides={DEFAULT_SLIDES} options={DEFAULT_OPTIONS}/>
         </aside>
     )
 }
