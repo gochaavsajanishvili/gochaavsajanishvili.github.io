@@ -1,7 +1,7 @@
 import { Sidebar } from "@/components/Sidebar";
-import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
 import { Experience } from "@/components/Experience";
+import { Skills } from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -13,11 +13,13 @@ export default function Home() {
           {/* Main Section */}
           <main className="md:col-span-2">
             {/* About Me Section */}
-            <Skills className="sm:hidden md:block" />
+            <div className="hidden md:block">
+              <Skills/>
+            </div>
             {/* Projects Section */}
-            <Projects />
+            <Projects/>
             {/* Experience Section */}
-            <Experience />
+            <Experience/>
           </main>
         </div>
       </div>
