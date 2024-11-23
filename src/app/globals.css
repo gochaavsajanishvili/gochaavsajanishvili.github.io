@@ -87,7 +87,6 @@ html {
 }
 .embla__container {
   display: flex;
-  touch-action: pan-x pinch-zoom;
   margin-top: 0;
   height: var(--slide-height);
   flex-direction: column;
@@ -108,4 +107,14 @@ html {
   text-align: center;
   height: 100%;
   user-select: none;
+}
+
+.embla--disabled .embla__viewport {
+  touch-action: none;
+  pointer-events: none;
+}
+
+.embla--disabled .embla__container,
+.embla--disabled .embla__slide {
+  pointer-events: none; /* Ensure child elements are non-interactive */
 }
